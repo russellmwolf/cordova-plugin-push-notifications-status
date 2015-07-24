@@ -1,9 +1,4 @@
-//
-//  Created by Russell Wolf
-//
-
 #import <Cordova/CDV.h>
-// @import UIKit;
 
 @interface PushNotificationsStatus : CDVPlugin
 

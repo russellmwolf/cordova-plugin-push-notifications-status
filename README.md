@@ -13,12 +13,12 @@ $ cordova plugin add https://github.com/nrswolf/cordova-plugin-push-notification
 ## Usage
 
 ```javascript
-var successHandler = function(message) {
-    alert(message);
+var successHandler = function(response) {
+  alert(response);
 }
 
-var errorHandler = function() {
-    alert("Error");
+var errorHandler = function(error) {
+  alert(error);
 }
 
 PushNotificationsStatus.isPushNotificationsEnabled(successHandler, errorHandler);
