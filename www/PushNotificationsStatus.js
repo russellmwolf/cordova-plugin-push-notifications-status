@@ -1,17 +1,11 @@
 module.exports = PushNotificationsStatus = {};
 
-PushNotificationsStatus.isPushNotificationsEnabled = function(app, callback) {
+PushNotificationsStatus.isPushNotificationsEnabled = function(successCallback, errorCallback) {
 	cordova.exec(
-		// Success callback
-		callback,
-		// Failure callback
-		function(err) { console.log('OpenSettins.settings error'); },
-		// Native Class Name
+    successCallback,
+    errorCallback,
 		"PushNotificationsStatus",
-		// Name of method in native class.
-		"isPushNotificationsEnabled",
-		// array of args to pass to method.
-		[]
+		"isPushNotificationsEnabled"
 	);
 };
 
