@@ -1,6 +1,6 @@
 Push Notifications Status
 ======
-A small cordova plugin that allows you to check whether the user has enabled/disabled notifications via iOS settings.  Wraps the ```isRegisteredForRemoteNotifications``` command in Objective-C.
+A small Cordova plugin that allows you to check whether the user has allowed notifications for a Cordova application via a device's iOS settings.  Calls the ```currentUserNotificationSettings``` Objective-C method and checks if the response includes the ```UIUserNotificationTypeAlert``` flag.
 
 Built with open source time @[philosophie](http://philosophie.is)
 
@@ -14,7 +14,7 @@ $ cordova plugin add https://github.com/nrswolf/cordova-plugin-push-notification
 
 ```javascript
 var successHandler = function(response) {
-  alert(response);
+  alert(response); // response will be either 'true' or 'false'
 }
 
 var errorHandler = function(error) {
