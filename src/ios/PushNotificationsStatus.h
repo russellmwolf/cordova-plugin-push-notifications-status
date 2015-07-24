@@ -3,8 +3,9 @@
 //
 
 #import <Cordova/CDV.h>
+// @import UIKit;
 
-@interface PushNotificationsStatus: CDVPlugin
+@interface PushNotificationsStatus : CDVPlugin
 
 - (void) isPushNotificationsEnabled:(CDVInvokedUrlCommand*)command;
 

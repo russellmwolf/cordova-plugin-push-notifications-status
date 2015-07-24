@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova.push-notifications-status" version="0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" value="PushNotificationsStatus" id="cordova.push-notifications-status" version="0.1">
 	<name>Push Notifications Status</name>
 	<author>Russell Wolf</author>
 	<description>Allows developer to know whether user has turned Push Notifications on or off through iOS settings via JS call.
@@ -15,7 +15,7 @@
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
 			<feature name="PushNotificationsStatus">
-				<param name="ios-package" value="OpenSettings"/>
+				<param name="ios-package" value="PushNotificationsStatus"/>
 			</feature>
 		</config-file>
 		<header-file src="src/ios/PushNotificationsStatus.h"/>

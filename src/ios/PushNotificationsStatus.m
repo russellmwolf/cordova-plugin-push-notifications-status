@@ -2,10 +2,15 @@
 
 @implementation PushNotificationsStatus
 
-  -(void) isPushNotificationsEnabled:(CDVInvokedUrlCommand*)command {
+  - (void)isPushNotificationsEnabled:(CDVInvokedUrlCommand*)command {
       BOOL notificationsEnabled = [[UIApplication sharedApplication] isRegisteredForRemoteNotifications];
 
-      [self.commandDelegate sendPluginResult:notificationsEnabled callbackId:command.callbackId]
+      NSString *payload = nil;
+      payload = notificationsEnabled? @"true" : @"false";
+
+      CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
   }
 
 @end
