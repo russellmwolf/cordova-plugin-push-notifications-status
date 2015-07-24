@@ -8,7 +8,7 @@
     UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
 
     NSString *payload = @"false";
-    if (grantedSettings.types & UIUserNotificationTypeAlert) {
+    if (grantedSettings.types != 0) {
       payload = @"true";    
     }
 
