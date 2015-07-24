@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" value="PushNotificationsStatus" id="cordova.push-notifications-status" version="0.1">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" value="PushNotificationsStatus" id="com.nrswolf.cordova.push-notifications-status" version="1.0.0">
 	<name>Push Notifications Status</name>
 	<author>Russell Wolf</author>
-	<description>Allows developer to know whether user has turned Push Notifications on or off through iOS settings via JS call.
+	<description>Cordova plugin to determine whether user has enabled push notification settings via native iOS settings.
 	</description>
 	<license>Apache 2.0</license>
 	<keywords>cordova, phonegap, push, push notifications</keywords>

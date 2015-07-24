@@ -1,0 +1,22 @@
+{
+    "version": "0.1",
+    "name": "com.nrswolf.cordova.push-notifications-status",
+    "cordova_name": "Push Notifications Status",
+    "description": "Allows developer to know whether user has turned Push Notifications on or off through iOS settings via JS call.\n\t",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "phonegap",
+        "push",
+        "push notifications"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3"
+        }
+    ]
+}
