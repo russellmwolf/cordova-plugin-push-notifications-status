@@ -5,16 +5,27 @@
   - (void)isPushNotificationsEnabled:(CDVInvokedUrlCommand*)command 
 {
 
-    UIUserNotificationSettings *grantedSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
-
-    NSString *payload = @"false";
-    if (grantedSettings.types != 0) {
-      payload = @"true";    
+  NSString *payload = @"false";
+  
+  if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]){
+    UIUserNotificationSettings *notificationSettings = [[UIApplication sharedApplication] currentUserNotificationSettings];
+    if (!notificationSettings || (notificationSettings.types == UIUserNotificationTypeNone)) {
+      payload = @"false";
+    } else {
+      payload = @"true";
     }
-
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
-
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+  } else {
+    UIRemoteNotificationType types = [[UIApplication sharedApplication] enabledRemoteNotificationTypes];
+    if (types & UIRemoteNotificationTypeAlert) {
+      payload = @"true";
+    } else{
+      payload = @"false";
+    }
   }
+  
+  CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:payload];
+  [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+
+}
 
 @end
