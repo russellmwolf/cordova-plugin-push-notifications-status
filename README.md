@@ -13,14 +13,10 @@ $ cordova plugin add com.nrswolf.cordova.push-notifications-status
 ## Usage
 
 ```javascript
-var successHandler = function(response) {
-  alert(response); // response will be either 'true' or 'false'
-}
-
-var errorHandler = function(error) {
-  alert(error);
-}
-
-PushNotificationsStatus.isPushNotificationsEnabled(successHandler, errorHandler);
+PushNotificationsStatus.isPushNotificationsEnabled(function(response) {
+  console.log('Success: ' + response); // response will be either 'true' or 'false'
+}, function(error) {
+  console.log('Error: ' + error);
+});
 ```
 
