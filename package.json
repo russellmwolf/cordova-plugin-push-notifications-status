@@ -1,22 +1,38 @@
 {
-    "version": "1.0.0",
-    "name": "com.nrswolf.cordova.push-notifications-status",
-    "cordova_name": "Push Notifications Status",
-    "description": "Cordova plugin to determine whether user has enabled push notification settings via native iOS settings.\n\t",
-    "license": "Apache 2.0",
-    "keywords": [
-        "cordova",
-        "phonegap",
-        "push",
-        "push notifications"
-    ],
+  "version": "1.0.0",
+  "name": "com.nrswolf.cordova.push-notifications-status",
+  "cordova_name": "Push Notifications Status",
+  "description": "Cordova plugin to determine whether user has enabled push notification settings via native iOS settings.\n\t",
+  "license": "Apache 2.0",
+  "keywords": [
+    "cordova",
+    "phonegap",
+    "push",
+    "push notifications",
+    "ecosystem:cordova"
+  ],
+  "platforms": [
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3"
+    }
+  ],
+  "cordova": {
+    "id": "com.nrswolf.cordova.push-notifications-status",
     "platforms": [
-        "ios"
-    ],
-    "engines": [
-        {
-            "name": "cordova",
-            "version": ">=3"
-        }
+      "ios"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrswolf/cordova-plugin-push-notifications-status.git"
+  },
+  "author": "Russell Wolf",
+  "bugs": {
+    "url": "https://github.com/nrswolf/cordova-plugin-push-notifications-status/issues"
+  },
+  "homepage": "https://github.com/nrswolf/cordova-plugin-push-notifications-status#readme"
 }

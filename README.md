@@ -7,7 +7,7 @@ Built with open source time @[philosophie](http://philosophie.is)
 ## Installation
 
 ```
-$ cordova plugin add com.nrswolf.cordova.push-notifications-status
+$ npm install com.nrswolf.cordova.push-notifications-status
 ```
 
 ## Usage
